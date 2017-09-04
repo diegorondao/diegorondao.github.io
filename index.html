@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Contagem Reveillon - Arraial</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style4.css" />
+		<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+        <link rel="stylesheet" href="css/flipclock.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/flipclock.js"></script>    
+    </head>
+    <body id="page">
+        <script type="text/javascript">
+            var clock;
+            $(document).ready(function() {
+                // Set dates.
+                var futureDate  = new Date("December  26, 2017 00:00 AM EDT");
+                var currentDate = new Date();
+
+                // Calculate the difference in seconds between the future and current date
+                var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+                // Calculate day difference and apply class to .clock for extra digit styling.
+                function dayDiff(first, second) {
+                    return (second-first)/(1000*60*60*24);
+                }
+
+                if (dayDiff(currentDate, futureDate) < 100) {
+                    $('.clock').addClass('twoDayDigits');
+                } else {
+                    $('.clock').addClass('threeDayDigits');
+                }
+
+                if(diff < 0) {
+                    diff = 0;
+                }
+
+                // Instantiate a coutdown FlipClock
+                clock = $('.clock').FlipClock(diff, {
+                    clockFace: 'DailyCounter',
+                    countdown: true
+                });
+            });
+        </script> 
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+            <li><span>Image 06</span></li>
+        </ul>
+        <div class="container">
+            <div class="rodape"> 
+                <div class="clock"></div>
+            </div>
+        </div>
+    </body>
+</html>
