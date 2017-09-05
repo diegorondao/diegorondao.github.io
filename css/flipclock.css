@@ -47,12 +47,12 @@
 
 .flip-clock-meridium a { color: #313333; }
 
-.flip-clock-wrapper {
+/*.flip-clock-wrapper {
   text-align: center;
   position: relative;
   width: 100%;
-  margin: 1em;
-}
+ /*margin: 1em;*/
+}*/
 
 .flip-clock-wrapper:before,
 .flip-clock-wrapper:after {

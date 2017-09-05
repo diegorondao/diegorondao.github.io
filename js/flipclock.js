@@ -2111,16 +2111,16 @@ var FlipClock;
 			}
 
 			if(this.showSeconds) {
-				$(this.createDivider('Seconds')).insertBefore(this.lists[this.lists.length - 2].$el);
+				$(this.createDivider('Segundos')).insertBefore(this.lists[this.lists.length - 2].$el);
 			}
 			else
 			{
 				offset = 2;
 			}
 
-			$(this.createDivider('Minutes')).insertBefore(this.lists[this.lists.length - 4 + offset].$el);
-			$(this.createDivider('Hours')).insertBefore(this.lists[this.lists.length - 6 + offset].$el);
-			$(this.createDivider('Days', true)).insertBefore(this.lists[0].$el);
+			$(this.createDivider('Minutos')).insertBefore(this.lists[this.lists.length - 4 + offset].$el);
+			$(this.createDivider('Horas')).insertBefore(this.lists[this.lists.length - 6 + offset].$el);
+			$(this.createDivider('Dias', true)).insertBefore(this.lists[0].$el);
 
 			this.base();
 		},
@@ -2187,11 +2187,11 @@ var FlipClock;
 				});
 			}
 			
-			$(this.createDivider('Seconds')).insertBefore(this.lists[this.lists.length - 2].$el);
-			$(this.createDivider('Minutes')).insertBefore(this.lists[this.lists.length - 4].$el);
+			$(this.createDivider('Segundos')).insertBefore(this.lists[this.lists.length - 2].$el);
+			$(this.createDivider('Minutos')).insertBefore(this.lists[this.lists.length - 4].$el);
 			
 			if(!excludeHours) {
-				$(this.createDivider('Hours', true)).insertBefore(this.lists[0].$el);
+				$(this.createDivider('Horas', true)).insertBefore(this.lists[0].$el);
 			}
 			
 			this.base();

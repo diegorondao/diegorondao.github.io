@@ -196,7 +196,17 @@ p.codrops-demos a.current-demo:hover{
 .rodape {
 	margin: auto;
 	width: 100%;
-	bottom: 10%;
-	left: 40%;
+	bottom: 4%;
+	left: 45%;
 	position: fixed;
+}
+
+@media (min-width: 323px) and (max-width: 767px) {
+	.rodape {
+		margin: auto;
+		width: 100%;
+		left: 0;
+		bottom: 4%;
+		position: fixed;
+	}
 }
